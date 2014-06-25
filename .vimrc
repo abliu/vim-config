@@ -15,6 +15,9 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
+Bundle 'derekwyatt/vim-scala'
+Bundle 'kien/ctrlp.vim'
+Bundle 'klen/python-mode'
 
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
