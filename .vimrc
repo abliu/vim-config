@@ -17,10 +17,16 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'derekwyatt/vim-scala'
 Bundle 'kien/ctrlp.vim'
+let g:ctrlp_working_path_mode=0
 Bundle 'klen/python-mode'
+let g:pymode_folding=0
+let g:pymode_doc=0
+Bundle 'tpope/vim-fugitive'
+Bundle 'vim-ruby/vim-ruby'
 
 " Github repos of the user 'vim-scripts'
 " => can omit the username part
+Bundle 'minibufexpl.vim'
 
 " non github repos
 
@@ -62,6 +68,18 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set foldmethod=syntax
+set foldlevelstart=1
+
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+
 " Use spaces instead of tabs
 set expandtab
 
@@ -69,8 +87,8 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set tw=80
