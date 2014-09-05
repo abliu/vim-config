@@ -5,32 +5,39 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'derekwyatt/vim-scala'
-Bundle 'kien/ctrlp.vim'
-let g:ctrlp_working_path_mode=0
-Bundle 'klen/python-mode'
-let g:pymode_folding=0
-let g:pymode_doc=0
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-ruby/vim-ruby'
-
-" Github repos of the user 'vim-scripts'
-" => can omit the username part
-Bundle 'minibufexpl.vim'
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+Plugin 'klen/python-mode'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'minibufexpl.vim'
 
 " non github repos
 
 filetype plugin indent on     " required!
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin Options
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ctrlp_working_path_mode=0
+let g:pymode_folding=0
+let g:pymode_doc=0
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
